@@ -53,7 +53,7 @@ $(document).ready(function () {
       $("#trivia-content").hide();
     }
   };
-
+});
   // $("#star-wars-form input").on("submit", function () {
   //   let radioValue = document.querySelector('input:checked').value;
   //   if (radioValue === "correct") {
@@ -143,5 +143,5 @@ $(document).ready(function () {
   // });
 
 
-});
+
 
