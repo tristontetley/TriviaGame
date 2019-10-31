@@ -27,7 +27,6 @@ $(document).ready(function () {
 
   function count() {
     time--;
-    console.log(time);
     $("#time-left").text(time);
     if (time === 0) {
       clearInterval(intervalId);
@@ -39,59 +38,94 @@ $(document).ready(function () {
   let incorrectAnswer = 0;
   let noAnswer = 8;
 
-  $("#star-wars-form input").on("click", function () {
+  $("#star-wars-form input").on("submit", function () {
     let radioValue = document.querySelector('input[name = radioOption1]:checked').value;
-    console.log(radioValue);
-    if (radioValue === correct) {
-      correctAnswer++;
-    } else if (radioValue != correct) {
-      incorrectAnswer++;
-      noAnswer--;
+    if (radioValue === "correct") {
+      correctAnswer = correctAnswer + 1;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue === "option1" || "option2" || "option3" || "option4" && radioValue !== "correct") {
+      incorrectAnswer = incorrectAnswer + 1;
+      $("#incorrect-answer").text(incorrectAnswer);
     }
   });
 
   $("#star-wars-form input").on("click", function () {
-    let radioValue = document.querySelector('input[name = radioOption2]:checked').value;
-    console.log(radioValue);
-
+    let radioValue2 = document.querySelector('input[name = radioOption2]:checked').value;
+    if (radioValue2 === "correct") {
+      correctAnswer = correctAnswer;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue2 === "option1" || "option2" || "option3" || "option4" && radioValue2 !== "correct") {
+      incorrectAnswer = incorrectAnswer;
+      $("#incorrect-answer").text(incorrectAnswer);
+    }
   });
 
   $("#star-wars-form input").on("click", function () {
-    let radioValue = document.querySelector('input[name = radioOption3]:checked').value;
-    console.log(radioValue);
-
+    let radioValue3 = document.querySelector('input[name = radioOption3]:checked').value;
+    if (radioValue3 === "correct") {
+      correctAnswer = correctAnswer;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue3 === "option1" || "option2" || "option3" || "option4" && radioValue3 !== "correct") {
+      incorrectAnswer = incorrectAnswer;
+      $("#incorrect-answer").text(incorrectAnswer);
+    }
   });
 
   $("#star-wars-form input").on("click", function () {
-    let radioValue = document.querySelector('input[name = radioOption4]:checked').value;
-    console.log(radioValue);
-
+    let radioValue4 = document.querySelector('input[name = radioOption4]:checked').value;
+    if (radioValue4 === "correct") {
+      correctAnswer = correctAnswer;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue4 === "option1" || "option2" || "option3" || "option4" && radioValue4 !== "correct") {
+      incorrectAnswer = incorrectAnswer;
+      $("#incorrect-answer").text(incorrectAnswer);
+    }
   });
 
   $("#star-wars-form input").on("click", function () {
-    let radioValue = document.querySelector('input[name = radioOption5]:checked').value;
-    console.log(radioValue);
-
+    let radioValue5 = document.querySelector('input[name = radioOption5]:checked').value;
+    if (radioValue5 === "correct") {
+      correctAnswer = correctAnswer;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue5 === "option1" || "option2" || "option3" || "option4" && radioValue5 !== "correct") {
+      incorrectAnswer = incorrectAnswer;
+      $("#incorrect-answer").text(incorrectAnswer);
+    }
   });
 
   $("#star-wars-form input").on("click", function () {
-    let radioValue = document.querySelector('input[name = radioOption6]:checked').value;
-    console.log(radioValue);
-
+    let radioValue6 = document.querySelector('input[name = radioOption6]:checked').value;
+    if (radioValue6 === "correct") {
+      correctAnswer = correctAnswer;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue6 === "option1" || "option2" || "option3" || "option4" && radioValue6 !== "correct") {
+      incorrectAnswer = incorrectAnswer;
+      $("#incorrect-answer").text(incorrectAnswer);
+    }
   });
 
   $("#star-wars-form input").on("click", function () {
-    let radioValue = document.querySelector('input[name = radioOption7]:checked').value;
-    console.log(radioValue);
-
+    let radioValue7 = document.querySelector('input[name = radioOption7]:checked').value;
+    if (radioValue7 === "correct") {
+      correctAnswer = correctAnswer;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue7 === "option1" || "option2" || "option3" || "option4" && radioValue7 !== "correct") {
+      incorrectAnswer = incorrectAnswer;
+      $("#incorrect-answer").text(incorrectAnswer);
+    }
   });
 
   $("#star-wars-form input").on("click", function () {
-    let radioValue = document.querySelector('input[name = radioOption8]:checked').value;
-    console.log(radioValue);
-
+    let radioValue8 = document.querySelector('input[name = radioOption8]:checked').value;
+    if (radioValue8 === "correct") {
+      correctAnswer = correctAnswer;
+      $("#correct-answer").text(correctAnswer);
+    } else if (radioValue8 === "option1" || "option2" || "option3" || "option4" && radioValue8 !== "correct") {
+      incorrectAnswer = incorrectAnswer;
+      $("#incorrect-answer").text(incorrectAnswer);
+    }
   });
+
 
 });
 
-// $("input:checked", "#star-wars-form").value;
