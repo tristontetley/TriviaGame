@@ -34,28 +34,64 @@ $(document).ready(function () {
       $("#results-heading").show();
       $("#trivia-content").hide();
     }
-  }
-
-  const correct = $(".correct")
+  };
   let correctAnswer = 0;
   let incorrectAnswer = 0;
   let noAnswer = 8;
 
-  // $("#star-wars-form input").on("click", function () {
-  //   $("input[type=radio]:checked", "#star-wars-form");
-  //   noAnswer--;
-  //   $("#unanswered-question").text(noAnswer);
-    
-  // });
-$("#star-wars-form").click(function () {
-  $(".form-check-label").prop("checked", true);
-  console.log("hello");
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption1]:checked').value;
+    console.log(radioValue);
+    if (radioValue === correct) {
+      correctAnswer++;
+    } else if (radioValue != correct) {
+      incorrectAnswer++;
+      noAnswer--;
+    }
+  });
+
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption2]:checked').value;
+    console.log(radioValue);
+
+  });
+
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption3]:checked').value;
+    console.log(radioValue);
+
+  });
+
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption4]:checked').value;
+    console.log(radioValue);
+
+  });
+
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption5]:checked').value;
+    console.log(radioValue);
+
+  });
+
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption6]:checked').value;
+    console.log(radioValue);
+
+  });
+
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption7]:checked').value;
+    console.log(radioValue);
+
+  });
+
+  $("#star-wars-form input").on("click", function () {
+    let radioValue = document.querySelector('input[name = radioOption8]:checked').value;
+    console.log(radioValue);
+
+  });
+
 });
 
-//   $(".form-check-label").click(function () { 
-//     $(".correct").prop("checked", true);
-//     console.log("close");
-// });
-
-
-})
+// $("input:checked", "#star-wars-form").value;
